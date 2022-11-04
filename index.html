@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="./assets/school-fav.svg"
+            type="image/x-icon"
+        />
+        <link
+            href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css"
+            rel="stylesheet"
+        />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="./style.css" />
+        <script defer src="./index.js"></script>
+        <title>Mapbox Cluster</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="github-link">
+                <img src="./assets/GitHub-Mark-32px.png" alt="github" />
+                <a
+                    href="https://github.com/codezerro/mapbox-cluster-custom-html-marker"
+                    target="_blank"
+                    >@codezerro</a
+                >
+            </div>
+            <div class="all-type-schools">
+                <div class="school-lists" id="school-lists">
+                    <ul></ul>
+                </div>
+            </div>
+            <div class="school-details" id="school-details">
+                <h3 class="school-details-name"></h3>
+                <div class="school-details-address">
+                    <span>STREET ADDRESS : </span>
+                    <span></span>
+                </div>
+                <div class="school-details-zipCode">
+                    <span>ZIP CODE : </span> <span></span>
+                </div>
+                <div class="school-details-phoneNumber">
+                    <span>PHONE NUMBER : </span> <span></span>
+                </div>
+                <div class="school-details-gradeLevel">
+                    <span>GRADE LEVEL : </span> <span></span>
+                </div>
+                <div class="school-details-type">
+                    <span>TYPE SPECIFIC: </span> <span></span>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+    </body>
+</html>

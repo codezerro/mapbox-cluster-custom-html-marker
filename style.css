@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
+body {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --school-color: #ff0000;
+    --school-icon: url("./assets/dollar-icon.svg");
+    --school-icon-url: url("./assets/dollar-icon.svg");
+    --school-cluster-color: orange;
+}
+.container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* school list */
+.all-type-schools {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 30;
+    background: #ffffff;
+    box-shadow: 5px 5px 30px 0px #aaa;
+    color: #212327;
+    font-weight: 500;
+    border-radius: 5%;
+    min-width: 280px;
+}
+.all-type-schools ul {
+    list-style: none;
+    padding: 0px 23px 0px 20px;
+    /* user-selector: none; */
+}
+.all-type-schools ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.all-type-schools ul li p::before {
+    content: "";
+    padding: 4px 12px;
+    background: var(--school-color);
+    border-radius: 50%;
+    margin-right: 15px;
+    background-image: var(--school-icon-url);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: center;
+    z-index: 15;
+}
+.all-type-schools ul li span {
+    margin-left: 40px;
+    background: #aaa;
+    padding: 6px 10px;
+    border-radius: 14%;
+    font-size: 14px;
+    font-weight: 800;
+    color: #fff;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* map custom marker */
+
+.map-marker {
+    z-index: 10;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: var(--school-color);
+    text-align: center;
+    line-height: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    cursor: pointer;
+    background-image: var(--school-icon);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
+}
+
+/* custom marker cluster */
+.marker-cluster-group::before {
+    content: attr(data-total);
+    position: absolute;
+    top: -13px;
+    left: 13px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 11px 8px;
+    border-radius: 50%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 26;
+}
+.marker-cluster-group {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: var(--school-cluster-color);
+    text-align: center;
+    line-height: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 25;
+    border: 2px solid #dddf;
+}
+
+.marker-image {
+    z-index: 25;
+    height: 22px;
+    width: 22px;
+}
+
+/* school details on click */
+.school-details {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background: white;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 30px 10px 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-shadow: 0px 0px 10px 5px #aaa;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-radius: 5px;
+    transform: translateX(320px);
+
+    transition: transform 0.5s linear 0.5s;
+}
+
+.school-details > * {
+    padding: 8px 0;
+}
+
+.school-details-name {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* github link */
+.github-link {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+    background: whitesmoke;
+    padding: 10px 15px;
+    box-shadow: 5px 5px 10px 5px #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.github-link > img {
+    width: 20px;
+    height: 20px;
+}
+.github-link > a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+}
